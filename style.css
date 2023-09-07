@@ -1,0 +1,30 @@
+:root {
+    --menubar-button-size: 2.5rem;
+    --menubar-button-gap: 0.5rem;
+}
+
+.menubar {
+    display: grid;
+    grid-template-columns: repeat(3, var(--menubar-button-size));
+    gap: var(--menubar-button-gap);
+}
+
+.menubars-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    margin: var(--menubar-button-size) 20vw;
+}
+
+#menubar-left {
+    justify-content: start;
+}
+
+#menubar-right {
+    justify-content: end;
+}
+
+.menubar-button {
+    width: 2.5rem;
+    height: 2.5rem;
+    font-size: 1.5rem;
+}
