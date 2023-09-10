@@ -1,6 +1,19 @@
 :root {
     --menubar-button-size: 2.5rem;
     --menubar-button-gap: 0.5rem;
+    --main-content-gap: 1rem;
+}
+
+.page-container {
+    margin: var(--menubar-button-size) 20vw;
+    display: grid;
+    gap: var(--menubar-button-size);
+}
+
+.menubars-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    justify-content: space-between;
 }
 
 .menubar {
@@ -9,17 +22,12 @@
     gap: var(--menubar-button-gap);
 }
 
-.menubars-container {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    margin: var(--menubar-button-size) 20vw;
-}
-
 #menubar-left {
     justify-content: start;
 }
 
 #menubar-right {
+    grid-area: 1 / 3 / 2 / 4;
     justify-content: end;
 }
 
@@ -27,4 +35,23 @@
     width: 2.5rem;
     height: 2.5rem;
     font-size: 1.5rem;
+}
+
+.main-container {
+    display: grid;
+    gap: var(--main-content-gap);
+}
+
+.timer {
+    place-self: center;
+    font-size: 3rem;
+}
+
+.typing-pane {
+    font-size: 1.7rem;
+}
+
+progress[value] {
+    appearance: none;
+    width: 100%;
 }

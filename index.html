@@ -10,26 +10,40 @@
 </head>
 
 <body>
-  <header>
-    <div class="menubars-container">
-      <div class="menubar" id="menubar-left">
-        <div class="menubar-button" id="common-words">
-          <img src="assets/icons/text-box.svg" alt="Common Words button icon">
+  <div class="page-container">
+    <header>
+      <div class="menubars-container">
+        <div class="menubar" id="menubar-left">
+          <div class="menubar-button" id="common-words">
+            <img src="assets/icons/text-box.svg" alt="Common Words button icon">
+          </div>
+          <div class="menubar-button" id="book-text">
+            <img src="assets/icons/book.svg" alt="Book Text button icon">
+          </div>
+          <div class="menubar-button" id="free-type">
+            <img src="assets/icons/lock-open.svg" alt="Free Type button icon">
+          </div>
         </div>
-        <div class="menubar-button" id="book-text">
-          <img src="assets/icons/book.svg" alt="Book Text button icon">
-        </div>
-        <div class="menubar-button" id="free-type">
-          <img src="assets/icons/lock-open.svg" alt="Free Type button icon">
+        <div class="menubar" id="menubar-right">
+          <div class="menubar-button" id="15s">15s</div>
+          <div class="menubar-button" id="30s">30s</div>
+          <div class="menubar-button" id="60s">60s</div>
         </div>
       </div>
-      <div class="menubar" id="menubar-right">
-        <div class="menubar-button" id="15s">15s</div>
-        <div class="menubar-button" id="30s">30s</div>
-        <div class="menubar-button" id="60s">60s</div>
+    </header>
+    <div class="main-container">
+      <div class="timer" id="timer">42s</div>
+      <div class="typing-pane">
+        typing text goes here with a bunch of common words from the
+        English language all laid out next to each other in no more
+        than three rows but we'll get to that later
+      </div>
+      <div class="progress-container">
+        <progress id="typing-progress" value="42" max="100"></progress>
+        <label for="typing-progress">Typing Progress</label>
       </div>
     </div>
-  </header>
+  </div>
   <script src="script.js"></script>
 </body>
 </html>
